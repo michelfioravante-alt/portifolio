@@ -1,0 +1,606 @@
+/* ============================================
+   PORTFOLIO — PAPER / EDITORIAL STYLE
+   Inspiração: New Yorker, layout limpo, serif
+   Paleta: Charcoal #282823, Ebony #595C56,
+           Sunray #E9BE5F, Blond #F5E8B6
+   ============================================ */
+
+:root {
+    --charcoal: #282823;
+    --ebony: #595C56;
+    --sunray: #E9BE5F;
+    --blond: #F5E8B6;
+    --white: #FFFFFF;
+    --paper: #FAFAFA;
+    --text: #282823;
+    --text-light: #595C56;
+    --text-muted: #9a9a92;
+    --rule: #282823;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== PAGE ===== */
+.page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.header-rule {
+    height: 1px;
+    background: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.header-tag {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.hero-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.hero-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+    border: none;
+    height: 1px;
+    background: var(--charcoal);
+    opacity: 0.12;
+    margin: 40px 0;
+}
+
+/* ===== KPIs ===== */
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    text-align: center;
+}
+
+.kpi {
+    padding: 16px 8px;
+    border-right: 1px solid rgba(40, 40, 35, 0.1);
+}
+
+.kpi:last-child {
+    border-right: none;
+}
+
+.kpi-number {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.kpi-accent {
+    color: var(--sunray);
+}
+
+.kpi-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ===== SECTION COMMON ===== */
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* ===== SOBRE ===== */
+.sobre-content p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--charcoal);
+    margin-top: 28px;
+    padding-left: 20px;
+    border-left: 2px solid var(--sunray);
+    line-height: 1.5;
+}
+
+/* ===== SKILLS ===== */
+.skill-group {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(40,40,35,.07);
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.skill-group--hi {
+    background: rgba(233,190,95,.08);
+    border: 1px solid rgba(233,190,95,.4);
+    border-radius: 2px;
+    padding: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.skill-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sunray);
+    background: rgba(233,190,95,.15);
+    padding: 2px 8px;
+    border: 1px solid rgba(233,190,95,.5);
+    border-radius: 2px;
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 5px 11px;
+    border: 1px solid rgba(40,40,35,.18);
+    font-size: 12px;
+    color: var(--text-light);
+    background: var(--white);
+    border-radius: 2px;
+    transition: all .2s ease;
+    cursor: default;
+}
+
+.chip:hover {
+    background: var(--charcoal);
+    color: var(--white);
+    border-color: var(--charcoal);
+}
+
+.chip--hi {
+    background: var(--charcoal);
+    color: var(--white);
+    border-color: var(--charcoal);
+}
+
+.chip--hi:hover {
+    background: var(--sunray);
+    color: var(--charcoal);
+    border-color: var(--sunray);
+}
+
+.chip--sm {
+    font-size: 11px;
+    padding: 4px 9px;
+}
+
+/* ===== BPMN FLOW / PROJETOS ===== */
+.bpmn-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.bpmn-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.bpmn-circle {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--charcoal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: var(--charcoal);
+    background: var(--white);
+}
+
+.bpmn-circle-end {
+    border-width: 2.5px;
+}
+
+.bpmn-end-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.bpmn-line {
+    width: 2px;
+    height: 32px;
+    background: var(--charcoal);
+    opacity: 0.5;
+}
+
+/* Projeto cards */
+.projeto {
+    width: 100%;
+    border: 1px solid rgba(40, 40, 35, 0.12);
+    padding: 24px;
+    position: relative;
+    background: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.projeto:hover {
+    border-color: rgba(40, 40, 35, 0.3);
+}
+
+.projeto-highlight {
+    border-left: 3px solid var(--sunray);
+}
+
+.projeto-badge {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sunray);
+    font-weight: 500;
+}
+
+.projeto-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.projeto-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.projeto-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal);
+}
+
+.projeto-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.projeto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.projeto-stack {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+.projeto-result {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.projeto-link {
+    color: var(--charcoal);
+    text-decoration: none;
+    background: var(--sunray);
+    padding: 4px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: background .2s, color .2s;
+}
+
+.projeto-link:hover {
+    background: var(--charcoal);
+    color: var(--sunray);
+}
+
+/* ===== BPMN GALLERY ===== */
+.bpmn-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.bpmn-fig {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bpmn-fig img {
+    width: 100%;
+    border: 1px solid rgba(40,40,35,.15);
+    display: block;
+    transition: border-color .2s;
+    cursor: zoom-in;
+}
+
+.bpmn-fig img:hover {
+    border-color: var(--sunray);
+}
+
+.workflow-fig {
+    margin: 14px 0;
+}
+
+.workflow-fig img {
+    width: 100%;
+    border: 1px solid rgba(40,40,35,.15);
+    display: block;
+    transition: border-color .2s;
+    cursor: zoom-in;
+}
+
+.workflow-fig img:hover {
+    border-color: var(--sunray);
+}
+
+.bpmn-fig figcaption,
+.workflow-fig figcaption {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Lightbox simples */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    padding: 24px;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+    box-shadow: 0 8px 40px rgba(0,0,0,.5);
+}
+
+/* ===== CONTATO ===== */
+.contato-desc {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+
+.contato-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contato-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(40, 40, 35, 0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 0.3s ease;
+}
+
+.contato-item:first-child {
+    border-top: 1px solid rgba(40, 40, 35, 0.08);
+}
+
+.contato-item:hover {
+    padding-left: 8px;
+}
+
+.contato-key {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--charcoal);
+}
+
+.contato-val {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.disponivel {
+    margin-top: 28px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 64px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 560px) {
+    .page {
+        padding: 32px 18px 60px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kpi {
+        border-bottom: 1px solid rgba(40, 40, 35, 0.1);
+        padding: 14px 8px;
+    }
+
+    .kpi:nth-child(2) {
+        border-right: none;
+    }
+
+    .kpi:nth-child(3),
+    .kpi:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .quote {
+        font-size: 17px;
+    }
+
+    .projeto-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .projeto-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
